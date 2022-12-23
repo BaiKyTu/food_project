@@ -11,9 +11,16 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
 server:
   port : 8081
   servlet:
     context-path: /api
-
+# @ConfigurationProperties: tự map key bên application thành đối tượng
+# @Value(${tên key}) : lấy giá trị key bên application thành biến
+file:
+  upload-dir: C:\Users\msii\Desktop\image
 
